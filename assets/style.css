@@ -97,6 +97,20 @@ h1, h2 {
   font-family: "Heebo", sans-serif;
 }
 
+.discord-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.discord-container img {
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
 .container-desktop {
   max-width: 960px;
   padding: 0 30px;
