@@ -25,7 +25,7 @@ body {
   flex-direction: column;
   font-size: var(--font-md);
   background-color: #fff;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ4MCIgaGVpZ2h0PSI2NTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+ICAgIDxwYXRoIGQ9Ik03MzEuMjA3IDY0OS44MDJDOTM1LjQ4NCA2NDIuMTQgMTQ4MCAzMzcuMzI1IDE0ODAgMTgwLjg4OGMwLTE1Ni40MzgtMzA5Ljc0NC0zNi4wNTUtNzIwLTM2LjA1NVMwLTE3NC40ODMgMCAxMzUuMTQ0YzAgMzA5LjYyNyA1MjYuOTMgNTIyLjMyIDczMS4yMDcgNTE0LjY1OHoiIGZpbGw9IiNGNkY4RkEiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==);
+  background-image: url("background.svg");
   background-size: cover;
   background-position-x: 20vw;
   background-position-y: -10vh;
@@ -33,15 +33,48 @@ body {
   line-height: 1.4;
 }
 
+a {
+  color: #65638f;
+  text-decoration: none;
+}
+
+.discord_fuck_you {
+  background-image: url("discord-black.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 70px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #fff;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: var(--font-md);
+    background-color: #000;
+    background-size: cover;
+    background-position-x: 20vw;
+    background-position-y: -10vh;
+    background-repeat: no-repeat;
+    line-height: 1.4;
+  }
+  a {
+    color: #7331ed;
+    text-decoration: none;
+  }
+  .discord_fuck_you {
+    background-image: url("discord-black.svg");
+  }
+}
+
 main {
   flex: 1;
   width: 100%;
 }
 
-a {
-  color: #65638f;
-  text-decoration: none;
-}
 a:hover {
   color: #5A51FE;
 }
@@ -326,16 +359,4 @@ html[dir=rtl] .app__logo-wrapper {
   max-width: 960px;
   padding: 0 30px;
   margin: auto;
-}
-
-.darkmode-toggle {
-  z-index: 500;
-}
-
-.darkmode-background {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ4MCIgaGVpZ2h0PSI2NTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+ICAgIDxwYXRoIGQ9Ik03MzEuMjA3IDY0OS44MDJDOTM1LjQ4NCA2NDIuMTQgMTQ4MCAzMzcuMzI1IDE0ODAgMTgwLjg4OGMwLTE1Ni40MzgtMzA5Ljc0NC0zNi4wNTUtNzIwLTM2LjA1NVMwLTE3NC40ODMgMCAxMzUuMTQ0YzAgMzA5LjYyNyA1MjYuOTMgNTIyLjMyIDczMS4yMDcgNTE0LjY1OHoiIGZpbGw9IiNGNkY4RkEiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==) !important;
-  background-size: cover !important;
-  background-position-x: 20vw !important;
-  background-position-y: -10vh !important;
-  background-repeat: no-repeat !important;
 }

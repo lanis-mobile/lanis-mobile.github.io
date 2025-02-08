@@ -114,14 +114,15 @@
 		<div class="app__fulldescription-content">
 			<p><em><b>Lanis-Mobile</b> wird von einer Gruppe hessischer Schüler in Zusammenarbeit mit dem Schulamt Rüsselsheim entwickelt.</em></p>
             <p>Fragen und Rückmeldungen? Kommen Sie auf uns zu: <br>
-            Henning Kauler: <a href="mailto:medienbildung.ssa.ruesselsheim@kultus.hessen.de">medienbildung.ssa.ruesselsheim@kultus.hessen.de</a></p>
-            <div id="contributors-list">
-
-			</div>
+                Henning Kauler: <a href="mailto:medienbildung.ssa.ruesselsheim@kultus.hessen.de">medienbildung.ssa.ruesselsheim@kultus.hessen.de</a><br>
+                Alessio Caputo: <a href="mailto:lanis-mobile@alessioc42.dev">lanis-mobile@alessioc42.dev</a>
+            </p>
 		</div>
 	</section>
 	<section class="container app__section discord-container">
-        <img src="assets/discord.svg" alt="Discord" width="200">
+        <div class="discord_fuck_you">
+
+        </div>
         <span><a href="https://discord.gg/MGYaSetUsY">Join our Discord</a> server to get in touch with developers and other users!</span>
 	</section>
 </main>
@@ -137,10 +138,10 @@
             </p>
             <ul class="footer__links">
                 <li class="footer__link">
-                    <a href="https://github.com/alessioC42/lanis-mobile/blob/main/SECURITY.md">Privacy</a>
+                    <a href="https://lanis-mobile.github.io/policy/">Privacy Policy</a>
                 </li>
                 <li class="footer__link">
-                    <a href="https://github.com/alessioC42/lanis-mobile" targe="_blank">GitHub</a>
+                    <a href="https://github.com/lanis-mobile/lanis-mobile" target="_blank">GitHub</a>
                 </li>
             </ul>
         </div>
@@ -155,7 +156,7 @@
 </script>
 <script>
 	// Fetch GitHub contributors using the GitHub API
-	fetch('https://api.github.com/repos/alessioC42/lanis-mobile/contributors')
+	fetch('https://api.github.com/repos/lanis-mobile/lanis-mobile/contributors')
 			.then(response => response.json())
 			.then(contributors => {
 				const contributorsList = document.getElementById('contributors-list');
