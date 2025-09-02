@@ -25,12 +25,10 @@ body {
   flex-direction: column;
   font-size: var(--font-md);
   background-color: #fff;
-  background-image: url("background.svg");
-  background-size: cover;
-  background-position-x: 20vw;
-  background-position-y: -10vh;
-  background-repeat: no-repeat;
   line-height: 1.4;
+  position: relative;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -44,6 +42,27 @@ a {
   background-repeat: no-repeat;
   width: 300px;
   height: 70px;
+}
+
+.bg-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -20;
+  pointer-events: none;
+}
+
+.background-image {
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  translate: 20vw -10vh;
+  overflow-x: clip;
+}
+
+.background-image path {
+  fill: #F6F8FA
 }
 
 @media (prefers-color-scheme: dark) {
@@ -67,6 +86,10 @@ a {
   }
   .discord_fuck_you {
     background-image: url("discord-black.svg");
+  }
+
+  .background-image path {
+    fill: #21133a
   }
 }
 
