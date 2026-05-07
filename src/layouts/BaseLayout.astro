@@ -1,0 +1,52 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+}
+
+const { title, description, ogImage = 'https://play-lh.googleusercontent.com/cbisJ2IlVLAB7VkLfjImwzIqiDP2LY2z5CaaCqeGIfmsPFjl0VSfrMmLgY98Go1Ajg=w416-h235' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html dir="auto" lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <link rel="icon" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="/assets/tobi.css" />
+  </head>
+  <body class="relative m-0 flex min-h-screen flex-col p-0">
+    <slot />
+
+    <div class="pointer-events-none absolute inset-0 -z-20 overflow-hidden">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-full w-full translate-x-[20vw] -translate-y-[10vh]"
+        preserveAspectRatio="xMinYMid slice"
+        viewBox="0 0 1480 650"
+      >
+        <path
+          class="bg-shape"
+          d="M731.207 649.802C935.484 642.14 1480 337.325 1480 180.888c0-156.438-309.744-36.055-720-36.055S0-174.483 0 135.144c0 309.627 526.93 522.32 731.207 514.658z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+
+    <script is:inline src="/assets/tobi.min.js"></script>
+    <script is:inline>
+      window.addEventListener('load', () => {
+        // @ts-ignore
+        new Tobi();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+---
+interface Props {
+  mobile?: boolean;
+}
+
+const { mobile = false } = Astro.props;
+---
+
+<div class:list={[
+  'flex flex-row items-center',
+  mobile ? 'justify-center md:hidden' : 'hidden md:flex',
+]}>
+  <a
+    class="inline-block"
+    href="https://play.google.com/store/apps/details?id=io.github.alessioc42.sph"
+    target="_blank"
+    rel="noreferrer"
+    title="Get on Google Play"
+  >
+    <img alt="Get on Google Play" src="/assets/google-play-badge.png" class="w-[126px] md:w-[176.4px]" />
+  </a>
+  <a
+    href="https://apps.apple.com/de/app/lanis-mobile/id6511247743?l=en-GB"
+    class="inline-block"
+    target="_blank"
+    rel="noreferrer"
+    title="Get on Appstore"
+  >
+    <img src="/assets/ios-badge.svg" alt="Get on Appstore" class="w-[100px] md:w-[140px]" />
+  </a>
+</div>

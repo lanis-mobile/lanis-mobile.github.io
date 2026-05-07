@@ -1,59 +1,56 @@
-<!DOCTYPE html>
-<html dir="auto" lang="de">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Datenschutzerklärung für Lanis-Mobile</title>
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
 
-    <meta content="Die Privacy Policy von Lanis-Mobile" name="description"/>
-    <link href="../assets/favicon.png" rel="icon"/>
-
-    <link href="../assets/simple-style.css" rel="stylesheet"/>
-</head>
-<body>
-    <h1 id="datenschutzerkl-rung-f-r-lanis-mobile">Datenschutzerklärung für Lanis-Mobile</h1>
+<BaseLayout
+  title="Datenschutzerklärung für Lanis-Mobile"
+  description="Die Privacy Policy von Lanis-Mobile"
+>
+  <main class="mx-auto w-full max-w-[960px] px-[30px] py-10">
+    <h1 class="mb-4 text-3xl">Datenschutzerklärung für Lanis-Mobile</h1>
     <p>io.github.alessioc42.sph</p>
-    <h2 id="verantwortlicher">Verantwortlicher</h2>
+    <h2 class="mt-6 mb-2 text-2xl">Verantwortlicher</h2>
     <p>Alessio Caputo</p>
     <p>65428 Rüsselsheim am Main</p>
     <p>E-Mail: lanis-mobile@alessioc42.dev</p>
-    <h2>Das Schulportal Hessen</h2>
+    <h2 class="mt-6 mb-2 text-2xl">Das Schulportal Hessen</h2>
     <p>Diese Anwendung steht in keiner Verbindung zu den Entwicklern des Schulportals Hessen. Diese Anwendung nutzt lediglich die von den Entwicklern des Schulportals Hessen bereitgestellten Zugriffsmöglichkeiten auf die Daten, vergleichbar mit der Nutzung eines Webbrowsers. Daher gilt die Datenschutzerklärung des Schulportals Hessen, diese ist unter dem folgendem Link zu finden:</p>
-    <p><a href="https://info.schulportal.hessen.de/datenschutzerklaerung/">https://info.schulportal.hessen.de/datenschutzerklaerung/</a></p>
-    <h2>Erhobene Daten</h2>
+    <p><a href="https://info.schulportal.hessen.de/datenschutzerklaerung/" target="_blank" rel="noreferrer">https://info.schulportal.hessen.de/datenschutzerklaerung/</a></p>
+    <h2 class="mt-6 mb-2 text-2xl">Erhobene Daten</h2>
     <p>Es werden keine Standortdaten erhoben.</p>
     <p>Die Anwendung lanis-mobile erfasst folgende personenbezogene Daten Systembedingt:</p>
-    <ul>
-    <li>Schule (oder Schulnummer)</li>
-    <li>Benutzername</li>
-    <li>Passwort</li>
+    <ul class="list-disc pl-8">
+      <li>Schule (oder Schulnummer)</li>
+      <li>Benutzername</li>
+      <li>Passwort</li>
     </ul>
     <p>Diese Daten sind für die Funktion der App notwendig, werden lokal gespeichert und zum Login an die Server des Schulportals Hessen übertragen. Zu keinem zeitpunkt werden diese an Dritte übertragen.</p>
-    <h3>Diagnosedaten</h3>
+    <h3 class="mt-4 mb-2 text-xl">Diagnosedaten</h3>
     <p>Zu Analysezwecken und Verbesserung der Anwendung wird bei jedem Start der App eine Information, die die Schulnummer, den aktuellen Zeitpunkt und die Version der App enthält anonym an den Entwickler der App übermittelt und für 3 Monate gespeichert. Die Löschung erfolgt automatisch.</p>
-    <h3>Netzwerkzugang</h3>
+    <h3 class="mt-4 mb-2 text-xl">Netzwerkzugang</h3>
     <p>Die Anwendung benötigt einen Netzzugang, um mit den Servern des Schulportals Hessen kommunizieren zu können.</p>
-    <h3>Benachrichtigungen</h3>
+    <h3 class="mt-4 mb-2 text-xl">Benachrichtigungen</h3>
     <p>Die Benachrichtigungsberechtigungen werden für die Benachrichtigungen des Vertretungsplans benötigt. Ohne diese Berechtigung können keine Benachrichtigungen versendet werden. Die Anwendung kann jedoch auch ohne dieses Feature verwendet werden.</p>
-    <h2>Lokal gespeicherte Daten</h2>
+    <h2 class="mt-6 mb-2 text-2xl">Lokal gespeicherte Daten</h2>
     <p>Die Anwendung muss um den Nutzer beim App-Start anzumelden bestimmte Daten Lokal speichern. Diese umfassen in erster Linie Schulnummer, Loginname und das Passwort des Benutzers. Das Passwort wird in einer durch den Android-Keystore/iOS-keychain gesicherten Umgebung gespeichert. Die weiteren gespeicherten Daten werden unverschlüsselt gespeichert.</p>
     <p>Des Weiteren werden Nutzereinstellungen ebenfalls Lokal unverschlüsselt gespeichert.</p>
-    <h2>Verschlüsselung</h2>
+    <h2 class="mt-6 mb-2 text-2xl">Verschlüsselung</h2>
     <p>Jegliche Kommunikation mit den Lanis-Servern erfolgt ausschließlich mit HTTPS-Verschlüsselung.</p>
     <p>Darüber hinaus werden sensible Daten wie Notizen oder Nachrichten durch eine zusätzliche Verschlüsselungsebene geschützt, die von der API des Schulportals vorgegeben wird.</p>
-    <h2>Löschung der Daten</h2>
-    <p>Mit der Deinstallation der Anwendung werden alle lokal gespeicherten Daten der Anwendung automatisch von Ihrem Gerät entfernt. Hierzu gehören:<br>Informationen des jeweiligen Accounts:
-        <ul>
-            <li>Schulnummer</li>
-            <li>Loginname</li>
-            <li>Passwort</li>
-            <li>Lokale Einstellungen</li>
-        </ul>
-        Als Service werden vorrübergehend die folgenden Daten auf dem Endgerät für die Dauer von 7 Tagen geschützt zwischengespeichert:
-        <ul>
-            <li>Stundenplan</li>
-            <li>Vertretungsplan</li>
-        </ul>
-        Es verbleiben keine personenbezogenen Daten der Anwendung auf Ihrem Gerät. Die auf den Servern des Schulportals Hessen gespeicherten Daten bleiben hiervon unberührt. Bitte beachten Sie hierzu die Datenschutzerklärung des Schulportals Hessen.
-    </p>
-</body>
-</html>
+    <h2 class="mt-6 mb-2 text-2xl">Löschung der Daten</h2>
+    <p>Mit der Deinstallation der Anwendung werden alle lokal gespeicherten Daten der Anwendung automatisch von Ihrem Gerät entfernt. Hierzu gehören:</p>
+    <p>Informationen des jeweiligen Accounts:</p>
+    <ul class="list-disc pl-8">
+      <li>Schulnummer</li>
+      <li>Loginname</li>
+      <li>Passwort</li>
+      <li>Lokale Einstellungen</li>
+    </ul>
+    <p>Als Service werden vorrübergehend die folgenden Daten auf dem Endgerät für die Dauer von 7 Tagen geschützt zwischengespeichert:</p>
+    <ul class="list-disc pl-8">
+      <li>Stundenplan</li>
+      <li>Vertretungsplan</li>
+    </ul>
+    <p>Es verbleiben keine personenbezogenen Daten der Anwendung auf Ihrem Gerät. Die auf den Servern des Schulportals Hessen gespeicherten Daten bleiben hiervon unberührt. Bitte beachten Sie hierzu die Datenschutzerklärung des Schulportals Hessen.</p>
+  </main>
+</BaseLayout>

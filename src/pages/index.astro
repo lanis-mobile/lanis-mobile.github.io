@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AppHeader from '../components/AppHeader.astro';
+import ScreenshotsSection from '../components/ScreenshotsSection.astro';
+import ContributorsSection from '../components/ContributorsSection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Lanis-Mobile"
+  description="Lanis-Mobile - Die Schulportal Hessen App. Bring deine Schule auf das nächste Level!"
+>
+  <main class="w-full flex-1">
+    <AppHeader />
+
+    <section>
+      <div class="mx-auto max-w-[960px] px-[30px]">
+        <a href="https://github.com/alessioc42/lanis-mobile" target="_blank" rel="noreferrer"><h2 class="text-[var(--font-lg)]">See on GitHub</h2></a>
+      </div>
+    </section>
+
+    <ScreenshotsSection />
+
+    <section class="mx-auto mb-16 max-w-[960px] px-[30px] md:mb-32">
+      <h2 class="text-[var(--font-lg)]">Beschreibung</h2>
+      <div>
+        <p><em>Das staatliche Schulamt für den Landkreis Groß-Gerau und den Main-Taunus-Kreis begleitet die inhaltliche und organisatorische Weiterentwicklung der App sowie die Prüfung des Funktionsumfangs zu Testzwecken.</em></p>
+        <p>Diese App ermöglicht einen einfachen Zugriff auf Lanis/das Schulportal Hessen. Die Funktionen umfassen:</p>
+        <ul class="list-disc pl-8">
+          <li>Anzeige des Vertretungsplans</li>
+          <li>Push-Benachrichtigungen zum Vertretungsplan</li>
+          <li>Erweiterte Filterfunktionen des Vertretungsplans</li>
+          <li>Zugang zum Schulkalender</li>
+          <li>Unterstützung für &quot;Mein Unterricht&quot; (Oberfläche der Lehrpersonen in Arbeit)</li>
+          <li>Unterstützung für Nachrichten</li>
+          <li>Stundenplan Ansicht (Oberfläche der Lehrpersonen in Arbeit)</li>
+          <li>Direkter 1-Klick-Login zur Lanis-Website</li>
+          <li>Dateispeicher (Abruf von Dateien)</li>
+        </ul>
+      </div>
+    </section>
+
+    <ContributorsSection />
+
+    <section class="mx-auto mb-16 flex max-w-[960px] flex-col items-center px-[30px] md:mb-32">
+      <div class="h-[70px] w-[300px] bg-contain bg-no-repeat [background-image:url('/assets/discord-black.svg')] dark:[background-image:url('/assets/discord-black.svg')]"></div>
+      <span>
+        <a href="https://discord.gg/MGYaSetUsY" target="_blank" rel="noreferrer">Join our Discord</a>
+        server to get in touch with developers and other users!
+      </span>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
