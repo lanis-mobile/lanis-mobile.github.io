@@ -46,6 +46,10 @@
   }
 }
 
+.bg-shape {
+  fill: #f6f8fa;
+}
+
 @media (prefers-color-scheme: dark) {
   @layer base {
     body {
@@ -61,8 +65,4 @@
   .bg-shape {
     fill: #21133a;
   }
-}
-
-.bg-shape {
-  fill: #f6f8fa;
 }
