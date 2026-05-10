@@ -50,6 +50,10 @@
   fill: #f6f8fa;
 }
 
+.tobi-zoom__icon {
+  display: none;
+}
+
 @media (prefers-color-scheme: dark) {
   @layer base {
     body {

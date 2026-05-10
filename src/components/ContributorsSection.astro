@@ -1,6 +1,6 @@
 <section class="mx-auto mb-16 max-w-[960px] px-[30px] md:mb-32">
   <h2 class="text-[var(--font-lg)]">Made with ♥ by</h2>
-  <div id="contributors-list"></div>
+  <div id="contributors-list" class="mt-4 flex flex-wrap items-center gap-2"></div>
   <div>
     <p><em><b>Lanis-Mobile</b> wird von einer Gruppe hessischer Schüler in Zusammenarbeit mit dem Schulamt Rüsselsheim entwickelt.</em></p>
     <p>
@@ -22,10 +22,10 @@
       const links = contributors
         .map(
           (contributor) =>
-            `<a title="${contributor.login}" href="${contributor.html_url}" target="_blank" rel="noreferrer"><img src="${contributor.avatar_url}" alt="${contributor.login}" width="50" height="50" loading="lazy"></a>`,
+            `<a class="inline-flex" title="${contributor.login}" href="${contributor.html_url}" target="_blank" rel="noreferrer"><img src="${contributor.avatar_url}" alt="${contributor.login}" width="50" height="50" loading="lazy"></a>`,
         )
-        .join(' ');
-      contributorsList.innerHTML = `<p>${links}</p>`;
+        .join('');
+      contributorsList.innerHTML = links;
     })
     .catch((error) => console.error('Error fetching GitHub contributors:', error));
 </script>
