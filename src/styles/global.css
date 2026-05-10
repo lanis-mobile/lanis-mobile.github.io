@@ -53,20 +53,3 @@
 .tobi-zoom__icon {
   display: none;
 }
-
-@media (prefers-color-scheme: dark) {
-  @layer base {
-    body {
-      color: #fff;
-      background-color: #000;
-    }
-
-    a {
-      color: #7331ed;
-    }
-  }
-
-  .bg-shape {
-    fill: #21133a;
-  }
-}
