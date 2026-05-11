@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
+import { getImage } from 'astro:assets';
 import GitHub from '../components/icons/GitHub.astro';
+import ogImageSource from '../../assets/og-image.png';
 
 interface Props {
   title: string;
@@ -8,7 +10,9 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description, ogImage = 'https://play-lh.googleusercontent.com/cbisJ2IlVLAB7VkLfjImwzIqiDP2LY2z5CaaCqeGIfmsPFjl0VSfrMmLgY98Go1Ajg=w416-h235' } = Astro.props;
+const optimizedOgImage = await getImage({ src: ogImageSource, width: 1200, height: 630, format: 'png' });
+
+const { title, description, ogImage = optimizedOgImage.src } = Astro.props;
 ---
 
 <!DOCTYPE html>

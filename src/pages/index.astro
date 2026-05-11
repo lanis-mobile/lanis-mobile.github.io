@@ -1,9 +1,12 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AppHeader from '../components/AppHeader.astro';
 import ScreenshotsSection from '../components/ScreenshotsSection.astro';
 import ContributorsSection from '../components/ContributorsSection.astro';
 import Footer from '../components/Footer.astro';
+import discordBlackSource from '../../assets/discord-black.svg';
+import discordWhiteSource from '../../assets/discord-white.svg';
 ---
 
 <BaseLayout
@@ -37,7 +40,10 @@ import Footer from '../components/Footer.astro';
     <ContributorsSection />
 
     <section class="mx-auto mb-16 flex max-w-[960px] flex-col items-center px-[30px] md:mb-32">
-      <div class="h-[70px] w-[300px] bg-contain bg-no-repeat [background-image:url('/assets/discord-black.svg')] dark:[background-image:url('/assets/discord-white.svg')]"></div>
+      <div class="relative h-[70px] w-[300px]">
+        <Image src={discordBlackSource} alt="" aria-hidden="true" class="h-full w-full object-contain dark:hidden" />
+        <Image src={discordWhiteSource} alt="" aria-hidden="true" class="hidden h-full w-full object-contain dark:block" />
+      </div>
       <span>
         <a href="https://discord.gg/MGYaSetUsY" target="_blank" rel="noreferrer">Join our Discord</a>
         server to get in touch with developers and other users!
