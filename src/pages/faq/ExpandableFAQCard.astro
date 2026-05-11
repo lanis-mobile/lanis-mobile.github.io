@@ -1,0 +1,18 @@
+---
+interface Props {
+    question: string;
+    number?: number;
+}
+
+const { question, number } = Astro.props as Props;
+---
+
+<details class="rounded-lg border border-border bg-muted px-4 my-3 py-3 text-foreground transition-colors duration-200 hover:border-ring open:bg-background bg-opacity-25 bg-gray-400">
+    <summary class="cursor-pointer rounded-sm font-semibold text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+        {number !== undefined && <span class="mr-1 opacity-70">{number}.</span>}
+        {question}
+    </summary>
+    <div class="prose prose-sm mt-3 max-w-none leading-relaxed text-muted-foreground dark:prose-invert">
+        <slot />
+    </div>
+</details>

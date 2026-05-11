@@ -1,0 +1,130 @@
+---
+import Footer from "../../components/Footer.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ExpandableFAQCard from "./ExpandableFAQCard.astro";
+---
+
+<BaseLayout title="Hilfe" description="Hilfe zum Schule">
+    <main class="container mx-auto p-4">
+        <h1 class="mb-4 text-3xl font-bold">Häufig gestellte Fragen</h1>
+        <p>
+            Hier findest du Antworten auf häufig gestellte Fragen zur App. Wenn
+            du weitere Fragen hast, die hier nicht beantwortet werden, zögere
+            nicht, uns zu kontaktieren. <a href="mailto:lanis-mobile@alessioc42.dev?subject=Antwort%20im%20FAQ%20nicht%20eindeutig">lanis-mobile@alessioc42.dev</a>
+        </p>
+        <ExpandableFAQCard
+            number={1}
+            question="Ich habe mein Passwort vergessen, was soll ich tun?"
+        >
+            <p>
+                Sollte der Link zum Zurücksetzen des Passworts nicht
+                funktionieren, wenden Sie sich bitte an das Schulsekretariat
+                oder Ihre Klassenleitung, um ein neues Passwort zu erhalten. Wir
+                haben keine Möglichkeit, Ihr Passwort zurückzusetzen.
+            </p>
+        </ExpandableFAQCard>
+
+        <ExpandableFAQCard
+            number={2}
+            question="Ein Modul funktioniert nicht bzw. ist ausgegraut, was kann man da machen?"
+        >
+            <p>
+                In diesem Fall können Sie leider nichts unternehmen. Das Modul
+                wurde entweder von Ihrer Schule deaktiviert oder wird von der
+                App für Ihren Account nicht unterstützt. Dies tritt insbesondere
+                bei Lehrkräften und Eltern auf, da die Anwendung primär für
+                Schülerinnen und Schüler entwickelt wurde.
+            </p>
+        </ExpandableFAQCard>
+
+        <ExpandableFAQCard
+            number={3}
+            question="Benachrichtigungen funktionieren nicht bzw. kommen nicht immer an, was kann ich tun?"
+        >
+            <p>
+                Dieses Problem ist bekannt, jedoch gibt es leider nur begrenzte
+                Möglichkeiten, es zu beheben. Die App verwendet kein
+                Push-Benachrichtigungssystem, sondern aktualisiert die
+                Benachrichtigungen periodisch im Hintergrund.
+            </p>
+            <p>
+                Idealerweise dauert es maximal 15 Minuten, bis eine
+                Benachrichtigung eintrifft. Häufig dauert es jedoch länger, da
+                das Betriebssystem die Hintergrundaktivität der App einschränkt.
+            </p>
+        </ExpandableFAQCard>
+
+        <ExpandableFAQCard
+            number={4}
+            question="Inwiefern ist die App offiziell?"
+        >
+            <p>
+                Die App ist nicht offiziell. Sie wurde bisher und wird weiterhin
+                nahezu ausschließlich von Schülerinnen und Schülern (bzw.
+                mittlerweile auch ehemaligen Schülerinnen und Schülern im
+                Studium) entwickelt.
+            </p>
+        </ExpandableFAQCard>
+
+        <ExpandableFAQCard
+            number={5}
+            question="Was hat das Staatliche Schulamt für den Landkreis Groß-Gerau und den Main-Taunus-Kreis mit der App zu tun?"
+        >
+            <p>
+                Das Staatliche Schulamt ist um den September 2024 auf uns
+                zugekommen und begleitet seitdem die Entwicklung. Diese
+                Kooperation ist mit dem 31.12.2025 offiziell ausgelaufen.
+            </p>
+        </ExpandableFAQCard>
+
+        <ExpandableFAQCard
+            number={6}
+            question="Kann ich die App auch auf macOS, Windows oder Linux installieren?"
+        >
+            <p>
+                Die kurze Antwort lautet: Nein. Das Projekt ist als mobile
+                Anwendung konzipiert und soll die Website ergänzen, jedoch nicht
+                vollständig ersetzen.
+            </p>
+        </ExpandableFAQCard>
+
+        <ExpandableFAQCard
+            number={7}
+            question="Ich bin in der Schulleitung und möchte die App meiner Schule zur Nutzung empfehlen, kann ich das?"
+        >
+            <p>
+                Wenden Sie sich hierzu an ihren Schulträger bzw. an das für Sie
+                zuständige staatliche Schulamt.
+            </p>
+        </ExpandableFAQCard>
+
+        <ExpandableFAQCard
+            number={8}
+            question="Ist die Hessische Lehrkräfteakademie an der Entwicklung beteiligt?"
+        >
+            <p>
+                Nein, die Lehrkräfteakademie ist nicht beteiligt. Es handelt
+                sich um eine reine Eigenentwicklung von Schülerinnen und
+                Schülern. Es gab einen Austausch, und es besteht ein sehr loser
+                Kontakt.
+            </p>
+        </ExpandableFAQCard>
+
+        <ExpandableFAQCard
+            number={9}
+            question="Welche Nutzerdaten werden erfasst?"
+        >
+            <p>
+                Wir (die Entwicklerinnen und Entwickler sowie Herausgeber)
+                erfassen keine personenbezogenen Daten. Die App kommuniziert
+                direkt mit den Servern des Schulportals, sodass wir keine Daten
+                mitlesen können.
+            </p>
+            <p>
+                Weitere Informationen können unserer Datenschutzerklärung
+                entnommen werden: <a href="http://example.com">link</a>.
+            </p>
+        </ExpandableFAQCard>
+    </main>
+    <Footer />
+</BaseLayout>
