@@ -1,4 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+import googlePlayBadgeSource from '../../assets/google-play-badge.png';
+import iosBadgeSource from '../../assets/ios-badge.svg';
+
 interface Props {
   mobile?: boolean;
 }
@@ -17,7 +21,7 @@ const { mobile = false } = Astro.props;
     rel="noreferrer"
     title="Get on Google Play"
   >
-    <img alt="Get on Google Play" src="/assets/google-play-badge.png" class="w-[126px] md:w-[176.4px]" />
+    <Image src={googlePlayBadgeSource} alt="Get on Google Play" class="w-[126px] md:w-[176.4px]" sizes="(min-width: 768px) 176px, 126px" />
   </a>
   <a
     href="https://apps.apple.com/de/app/lanis-mobile/id6511247743?l=en-GB"
@@ -26,6 +30,6 @@ const { mobile = false } = Astro.props;
     rel="noreferrer"
     title="Get on Appstore"
   >
-    <img src="/assets/ios-badge.svg" alt="Get on Appstore" class="w-[100px] md:w-[140px]" />
+    <Image src={iosBadgeSource} alt="Get on Appstore" class="w-[100px] md:w-[140px]" sizes="(min-width: 768px) 140px, 100px" />
   </a>
 </div>

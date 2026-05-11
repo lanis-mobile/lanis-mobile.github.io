@@ -1,5 +1,8 @@
 ---
 import '../styles/global.css';
+import { getImage } from 'astro:assets';
+import GitHub from '../components/icons/GitHub.astro';
+import ogImageSource from '../../assets/og-image.png';
 
 interface Props {
   title: string;
@@ -7,7 +10,9 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description, ogImage = 'https://play-lh.googleusercontent.com/cbisJ2IlVLAB7VkLfjImwzIqiDP2LY2z5CaaCqeGIfmsPFjl0VSfrMmLgY98Go1Ajg=w416-h235' } = Astro.props;
+const optimizedOgImage = await getImage({ src: ogImageSource, width: 1200, height: 630, format: 'png' });
+
+const { title, description, ogImage = optimizedOgImage.src } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -24,6 +29,23 @@ const { title, description, ogImage = 'https://play-lh.googleusercontent.com/cbi
     <link rel="stylesheet" href="/assets/tobi.css" />
   </head>
   <body class="relative m-0 flex min-h-screen flex-col p-0">
+    <!-- GitHub Badge -->
+    <a
+      href="https://github.com/alessioc42/lanis-mobile"
+      target="_blank"
+      rel="noreferrer"
+      class="group fixed right-0 top-0 z-50 block h-24 w-24 sm:h-28 sm:w-28"
+      aria-label="View on GitHub"
+    >
+      <span
+        aria-hidden="true"
+        class="absolute inset-0 bg-[#151513] transition-colors duration-200 group-hover:bg-[#24292e] dark:bg-white dark:group-hover:bg-white [clip-path:polygon(100%_0,0_0,100%_100%)]"
+      ></span>
+      <span class="absolute right-3 top-3 text-2xl text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.7)] dark:text-[#151513] sm:right-4 sm:top-4 sm:text-3xl">
+        <GitHub />
+      </span>
+    </a>
+
     <slot />
 
     <div class="pointer-events-none absolute inset-0 -z-20 overflow-hidden">

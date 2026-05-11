@@ -1,18 +1,16 @@
 ---
-const screenshots = [
-  '01.png',
-  '02.png',
-  '03.png',
-  '04.png',
-  '05.png',
-  '06.png',
-].map(
-  (name) =>
-    `https://raw.githubusercontent.com/alessioC42/lanis-mobile/main/fastlane/metadata/android/en-US/images/phoneScreenshots/${name}`,
-);
+import { Image } from 'astro:assets';
+import screenshot01 from '../../assets/fastlane/metadata/android/en-US/images/phoneScreenshots/01.png';
+import screenshot02 from '../../assets/fastlane/metadata/android/en-US/images/phoneScreenshots/02.png';
+import screenshot03 from '../../assets/fastlane/metadata/android/en-US/images/phoneScreenshots/03.png';
+import screenshot04 from '../../assets/fastlane/metadata/android/en-US/images/phoneScreenshots/04.png';
+import screenshot05 from '../../assets/fastlane/metadata/android/en-US/images/phoneScreenshots/05.png';
+import screenshot06 from '../../assets/fastlane/metadata/android/en-US/images/phoneScreenshots/06.png';
+
+const screenshots = [screenshot01, screenshot02, screenshot03, screenshot04, screenshot05, screenshot06];
 ---
 
-<section class="mb-16 md:mb-32">
+<section class="mb-8 md:mb-16">
   <div class="mx-auto max-w-[960px] px-[30px]">
     <h2 class="text-[var(--font-lg)]">Screenshots</h2>
   </div>
@@ -21,13 +19,28 @@ const screenshots = [
     <div class="relative">
       <div data-carousel class="overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <div class="grid w-[800px] grid-cols-6 gap-5 p-8 md:w-auto md:p-[30px_0]">
-          {screenshots.map((url) => (
-            <a class="lightbox" href={url}>
-              <img alt="" class="w-full cursor-pointer rounded-2xl shadow-[0_12px_48px_rgba(17,16,62,0.12)] transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-[0_24px_48px_rgba(17,16,62,0.12)]" src={url} />
+          {screenshots.map((screenshot) => (
+            <a class="lightbox" href={screenshot.src}>
+              <Image
+                src={screenshot}
+                alt=""
+                class="w-full cursor-pointer rounded-2xl shadow-[0_12px_48px_rgba(17,16,62,0.12)] transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-[0_24px_48px_rgba(17,16,62,0.12)]"
+                loading="lazy"
+                sizes="(min-width: 768px) 126px, 126px"
+              />
             </a>
           ))}
         </div>
       </div>
+    </div>
+    <div class="mx-auto max-w-[960px] px-[30px] mt-6 flex justify-center">
+      <a
+        href="/faq"
+        class="inline-block rounded bg-[#111] text-white px-5 py-2 text-lg hover:opacity-90 transition-colors dark:bg-white dark:text-[#151513]"
+        aria-label="Zur FAQ-Seite"
+      >
+        Zur FAQ-Seite
+      </a>
     </div>
   </div>
 </section>
