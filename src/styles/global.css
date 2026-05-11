@@ -55,19 +55,17 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  @layer base {
-    body {
-      color: #f3f4f6;
-      background-color: #0f172a;
-    }
+  body {
+    color: #f3f4f6;
+    background-color: #0f172a;
+  }
 
-    a {
-      color: #a5b4fc;
-    }
+  a {
+    color: #a5b4fc;
+  }
 
-    a:hover {
-      color: #c7d2fe;
-    }
+  a:hover {
+    color: #c7d2fe;
   }
 
   .bg-shape {
