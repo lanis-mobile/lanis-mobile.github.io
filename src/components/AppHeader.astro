@@ -1,0 +1,19 @@
+---
+import StoreButtons from './StoreButtons.astro';
+---
+
+<header class="mx-auto mt-8 mb-4 flex w-full max-w-[960px] flex-row items-start px-[30px] md:mt-32 md:mb-32 md:items-center">
+  <div class="mr-4 inline-block h-full w-full max-w-[100px] max-h-[100px] bg-[url('/assets/ios-mask-border-128.svg')] bg-contain bg-no-repeat p-[1px] md:mr-16 md:max-h-[250px] md:max-w-[250px]">
+    <img alt="Lanis-Mobile" class="h-auto w-full rounded-[22.5%] [mask-image:url('/assets/ios-mask.svg')] [mask-size:cover]" src="/content/image/b3o1shvbuyeezgcpd7vp.png" />
+  </div>
+  <div>
+    <h1 class="m-0 font-bold text-4xl text-[var(--font-xl)]">Lanis-Mobile</h1>
+    <p class="mt-2 mb-0 text-[var(--font-lg)] md:my-4 text-xl">Deine App für das hessische Schulportal!</p>
+    <p>In Zusammenarbeit mit dem staatlichen Schulamt für den Landkreis Groß-Gerau und den Main-Taunus-Kreis</p>
+    <StoreButtons />
+  </div>
+</header>
+
+<div class="mx-auto mb-16 w-full max-w-[960px] px-[30px] md:hidden">
+  <StoreButtons mobile={true} />
+</div>
