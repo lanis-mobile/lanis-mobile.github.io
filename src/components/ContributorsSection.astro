@@ -22,7 +22,9 @@
       const links = contributors
         .map(
           (contributor) =>
-            `<a class="inline-flex" title="${contributor.login}" href="${contributor.html_url}" target="_blank" rel="noreferrer"><img src="${contributor.avatar_url}" alt="${contributor.login}" width="50" height="50" loading="lazy"></a>`,
+            `<a class="inline-flex" title="${contributor.login}" href="${contributor.html_url}" target="_blank" rel="noreferrer">
+              <img class="rounded-xl" src="${contributor.avatar_url}" alt="${contributor.login}" width="50" height="50" loading="lazy">
+            </a>`,
         )
         .join('');
       contributorsList.innerHTML = links;

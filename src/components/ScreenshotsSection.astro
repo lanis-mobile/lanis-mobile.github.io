@@ -19,15 +19,6 @@ const screenshots = [
 
   <div class="mx-auto max-w-[960px] px-0 md:px-[30px]">
     <div class="relative">
-      <button
-        type="button"
-        data-carousel-prev
-        aria-label="Previous screenshots"
-        class="absolute top-1/2 left-2 z-10 hidden -translate-y-1/2 rounded-full bg-black/40 px-3 py-2 text-white md:block"
-      >
-        ‹
-      </button>
-
       <div data-carousel class="overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <div class="grid w-[800px] grid-cols-6 gap-5 p-8 md:w-auto md:p-[30px_0]">
           {screenshots.map((url) => (
@@ -37,15 +28,6 @@ const screenshots = [
           ))}
         </div>
       </div>
-
-      <button
-        type="button"
-        data-carousel-next
-        aria-label="Next screenshots"
-        class="absolute top-1/2 right-2 z-10 hidden -translate-y-1/2 rounded-full bg-black/40 px-3 py-2 text-white md:block"
-      >
-        ›
-      </button>
     </div>
   </div>
 </section>
